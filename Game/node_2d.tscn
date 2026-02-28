@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cl7gwgvo4h64f"]
+
+[ext_resource type="PackedScene" uid="uid://dnc20jiqa847l" path="res://Game/Samurai.tscn" id="1_dvha3"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_dvha3"]
+distance = 9.0
+
+[node name="Game" type="Node2D" unique_id=505857078]
+
+[node name="CharacterBody2D" parent="." unique_id=1681749266 instance=ExtResource("1_dvha3")]
+position = Vector2(484, 273)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1055557104]
+position = Vector2(484, 369)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=871816208]
+shape = SubResource("WorldBoundaryShape2D_dvha3")
